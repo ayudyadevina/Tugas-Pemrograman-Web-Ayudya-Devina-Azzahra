@@ -147,6 +147,8 @@ Seluruh halaman menyesuaikan ukuran layar menggunakan sistem grid Bootstrap. Pad
 
 <img width="300" height="590" alt="WhatsApp Image 2026-10-20 at 8 31 53 PM" src="https://github.com/user-attachments/assets/71fe5d14-3956-48f3-b63b-c3b4f118cc7a" />
 
+<img width="300" height="590" alt="WhatsApp Image 2026-10-20 at 8 44 26 PM" src="https://github.com/user-attachments/assets/bc47276b-dac8-44d9-8eb9-ddb7a98e7cff" />
+
 <img width="300" height="590" alt="WhatsApp Image 2026-10-20 at 8 31 53 PM (1)" src="https://github.com/user-attachments/assets/8c7ca113-b6d8-4328-9180-c663d75cf0bc" />
 
 <img width="300" height="590" alt="WhatsApp Image 2026-10-20 at 8 31 54 PM" src="https://github.com/user-attachments/assets/8f65ae9d-da0d-485c-a599-520e7f956e8d" />
