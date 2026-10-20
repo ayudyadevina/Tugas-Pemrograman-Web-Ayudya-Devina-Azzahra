@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Daftar - Lembar</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="style.css" rel="stylesheet">
+</head>
+<body>
+
+  <div class="auth-wrapper">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-11 col-md-9 col-lg-6">
+
+          <div class="text-center mb-4">
+            <a href="index.html" class="text-decoration-none">
+              <h1 class="h2" style="color: var(--cokelat);"><i class="bi bi-book-half me-1"></i>Lembar</h1>
+            </a>
+          </div>
+
+          <div class="card auth-card p-4 p-md-5">
+            <h2 class="h3 text-center mb-1">Mulai lembar pertamamu</h2>
+            <p class="text-center text-secondary small mb-4">Buat akun untuk menyimpan rak bukumu.</p>
+
+            <form class="needs-validation" id="formRegister" novalidate>
+
+              <div class="mb-3">
+                <label for="nama" class="form-label">Nama lengkap</label>
+                <input type="text" class="form-control" id="nama" placeholder="Nama kamu" required>
+                <div class="invalid-feedback">Nama wajib diisi.</div>
+              </div>
+
+              <div class="mb-3">
+                <label for="email" class="form-label">Email</label>
+                <input type="email" class="form-control" id="email" placeholder="nama@email.com" required>
+                <div class="invalid-feedback">Masukkan email yang valid.</div>
+              </div>
+
+              <div class="row">
+                <div class="col-md-6 mb-3">
+                  <label for="password" class="form-label">Kata sandi</label>
+                  <input type="password" class="form-control" id="password" placeholder="Min. 6 karakter" minlength="6" required>
+                  <div class="invalid-feedback">Minimal 6 karakter.</div>
+                </div>
+                <div class="col-md-6 mb-3">
+                  <label for="konfirmasi" class="form-label">Konfirmasi kata sandi</label>
+                  <input type="password" class="form-control" id="konfirmasi" placeholder="Ulangi kata sandi" required>
+                  <div class="invalid-feedback">Kata sandi tidak sama.</div>
+                </div>
+              </div>
+
+              <div class="mb-3">
+                <label for="genre" class="form-label">Genre favorit <span class="text-secondary small">(opsional)</span></label>
+                <select class="form-select" id="genre" style="background-color: var(--krem); border-color: var(--cokelat-muda);">
+                  <option value="" selected>Pilih genre</option>
+                  <option>Fiksi</option>
+                  <option>Romansa</option>
+                  <option>Fantasi</option>
+                  <option>Drama keluarga</option>
+                  <option>Non-fiksi</option>
+                </select>
+              </div>
+
+              <div class="form-check mb-4">
+                <input class="form-check-input" type="checkbox" id="setuju" required>
+                <label class="form-check-label small" for="setuju">Saya setuju dengan syarat dan ketentuan Lembar.</label>
+                <div class="invalid-feedback">Kamu harus menyetujui dulu.</div>
+              </div>
+
+              <div class="d-grid">
+                <button type="submit" class="btn btn-lembar btn-lg">Daftar</button>
+              </div>
+            </form>
+
+            <p class="text-center small mt-4 mb-0">
+              Sudah punya akun? <a href="login.html" class="fw-semibold">Masuk di sini</a>
+            </p>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    const form = document.getElementById('formRegister');
+    const password = document.getElementById('password');
+    const konfirmasi = document.getElementById('konfirmasi');
+
+    // Cek apakah konfirmasi sama dengan kata sandi
+    function cekKonfirmasi() {
+      if (konfirmasi.value !== password.value) {
+        konfirmasi.setCustomValidity('Tidak sama'); // menandai input sebagai tidak valid
+      } else {
+        konfirmasi.setCustomValidity('');
+      }
+    }
+    password.addEventListener('input', cekKonfirmasi);
+    konfirmasi.addEventListener('input', cekKonfirmasi);
+
+    form.addEventListener('submit', function (event) {
+      event.preventDefault();
+      cekKonfirmasi();
+      if (!form.checkValidity()) {
+        event.stopPropagation();
+      } else {
+        alert('Pendaftaran berhasil! (contoh saja, belum terhubung ke database)');
+        window.location.href = 'login.html';
+      }
+      form.classList.add('was-validated');
+    });
+  </script>
+</body>
+</html>

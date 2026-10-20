@@ -1,0 +1,213 @@
+:root {
+  --krem: #fbf3e6;        /* latar halaman */
+  --krem-tua: #f3e3cc;    /* latar section selang-seling */
+  --cokelat-muda: #d9b99b;
+  --cokelat: #8b5e3c;
+  --cokelat-tua: #4a3022; /* teks utama */
+  --oranye: #c2571a;      /* aksen oranye deep hangat */
+  --oranye-hover: #a54612;
+
+  --bs-body-bg: var(--krem);
+  --bs-body-color: var(--cokelat-tua);
+  --bs-body-font-family: 'Poppins', sans-serif;
+  --bs-link-color: var(--oranye);
+  --bs-link-hover-color: var(--oranye-hover);
+}
+
+body {
+  background-color: var(--krem);
+}
+
+h1, h2, h3, h4, .navbar-brand {
+  font-family: 'Playfair Display', serif;
+  font-weight: 700;
+}
+
+/* ---------- Navbar ---------- */
+.navbar-lembar {
+  background-color: var(--krem);
+  border-bottom: 1px solid var(--cokelat-muda);
+}
+.navbar-lembar .navbar-brand {
+  color: var(--cokelat);
+  font-size: 1.7rem;
+}
+.navbar-lembar .nav-link {
+  color: var(--cokelat-tua);
+}
+.navbar-lembar .nav-link:hover,
+.navbar-lembar .nav-link.active {
+  color: var(--oranye);
+}
+
+/* ---------- Tombol ---------- */
+.btn-lembar {
+  background-color: var(--oranye);
+  border-color: var(--oranye);
+  color: #fff;
+  border-radius: 50rem;
+  padding: .55rem 1.5rem;
+}
+.btn-lembar:hover,
+.btn-lembar:focus {
+  background-color: var(--oranye-hover);
+  border-color: var(--oranye-hover);
+  color: #fff;
+}
+.btn-outline-lembar {
+  border: 2px solid var(--cokelat);
+  color: var(--cokelat);
+  border-radius: 50rem;
+  padding: .5rem 1.4rem;
+}
+.btn-outline-lembar:hover {
+  background-color: var(--cokelat);
+  color: #fff;
+}
+
+/* ---------- Hero ---------- */
+.hero {
+  /* gradasi langit sore: krem -> peach -> cokelat muda */
+  background: linear-gradient(160deg, #fff4e0 0%, #f6c995 55%, var(--cokelat-muda) 100%);
+  padding: 6rem 0;
+}
+.hero h1 {
+  font-size: calc(2rem + 2vw);
+  color: var(--cokelat-tua);
+}
+.hero .lead {
+  color: var(--cokelat);
+}
+.hero-badge {
+  background-color: rgba(194, 87, 26, .12);
+  color: var(--oranye);
+  border-radius: 50rem;
+  padding: .35rem 1rem;
+  font-size: .85rem;
+  font-weight: 500;
+}
+.kata-sorot {
+  color: var(--oranye);
+  font-style: italic; 
+}
+.hero-ilustrasi {
+  width: 100%;
+  max-width: 540px;
+  margin-left: 8rem;
+  -webkit-mask-image:
+    linear-gradient(to right, transparent, #000 20%, #000 80%, transparent),
+    linear-gradient(to bottom, transparent, #000 20%, #000 80%, transparent);
+  -webkit-mask-composite: source-in;
+  mask-image:
+    linear-gradient(to right, transparent, #000 20%, #000 80%, transparent),
+    linear-gradient(to bottom, transparent, #000 20%, #000 80%, transparent);
+  mask-composite: intersect;
+}
+
+/* ---------- Section ---------- */
+.section-title {
+  color: var(--cokelat);
+  font-size: calc(1rem + 2vw);
+}
+.section-alt {
+  background-color: var(--krem-tua);
+}
+
+/* ---------- Kartu buku ---------- */
+.book-card {
+  background-color: #fffaf2;
+  border: 1px solid var(--cokelat-muda);
+  border-radius: 1rem;
+  overflow: hidden;
+  transition: transform .2s ease, box-shadow .2s ease;
+}
+.book-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 .8rem 1.5rem rgba(74, 48, 34, .15);
+}
+
+.book-cover {
+  height: 230px;
+  background: linear-gradient(160deg, var(--c1), var(--c2));
+  color: #fff;
+  display: flex;
+  align-items: flex-end;
+  padding: 1.2rem;
+  font-family: 'Playfair Display', serif;
+  font-weight: 700;
+  font-size: 1.25rem;
+  line-height: 1.25;
+  text-shadow: 0 1px 4px rgba(0, 0, 0, .35);
+}
+.book-cover-img {
+  width: 100%;
+  aspect-ratio: 2 / 3;   
+  object-fit: cover;
+  display: block;
+}
+
+.badge-lembar {
+  background-color: var(--oranye);
+  color: #fff;
+  font-weight: 500;
+}
+.badge-soft {
+  background-color: var(--krem-tua);
+  color: var(--cokelat);
+  border: 1px solid var(--cokelat-muda);
+  font-weight: 500;
+}
+
+/* ---------- Fitur ---------- */
+.feature-icon {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background-color: rgba(194, 87, 26, .12);
+  color: var(--oranye);
+  font-size: 1.8rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ---------- Form (login & register) ---------- */
+.auth-wrapper {
+  min-height: 100vh;
+  background: linear-gradient(160deg, #fff4e0 0%, #f6c995 55%, var(--cokelat-muda) 100%);
+  display: flex;
+  align-items: center;
+  padding: 2rem 0;
+}
+.auth-card {
+  background-color: #fffaf2;
+  border: 1px solid var(--cokelat-muda);
+  border-radius: 1.25rem;
+  box-shadow: 0 1rem 2rem rgba(74, 48, 34, .15);
+}
+.auth-card .form-control {
+  background-color: var(--krem);
+  border-color: var(--cokelat-muda);
+  padding: .65rem .9rem;
+}
+.auth-card .form-control:focus {
+  border-color: var(--oranye);
+  box-shadow: 0 0 0 .25rem rgba(194, 87, 26, .2);
+}
+.auth-card .form-check-input:checked {
+  background-color: var(--oranye);
+  border-color: var(--oranye);
+}
+
+/* ---------- Footer ---------- */
+.footer-lembar {
+  background-color: var(--cokelat-tua);
+  color: var(--cokelat-muda);
+}
+.footer-lembar a {
+  color: var(--cokelat-muda);
+  text-decoration: none;
+}
+.footer-lembar a:hover {
+  color: #fff;
+}

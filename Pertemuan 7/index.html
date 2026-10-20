@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Lembar - Baca Buku di Sore Hari</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="style.css" rel="stylesheet">
+</head>
+<body>
+
+  <!-- ============ NAVBAR ============ -->
+    <div class="container">
+      <a class="navbar-brand" href="index.html"><i class="bi bi-book-half me-1"></i>Lembar</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuUtama" aria-controls="menuUtama" aria-expanded="false" aria-label="Buka menu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="menuUtama">
+        <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+          <li class="nav-item"><a class="nav-link active" href="#beranda">Beranda</a></li>
+          <li class="nav-item"><a class="nav-link" href="#rak-buku">Rak Buku</a></li>
+          <li class="nav-item"><a class="nav-link" href="#fitur">Kenapa Lembar</a></li>
+        </ul>
+        <div class="d-flex gap-2">
+          <a href="login.html" class="btn btn-outline-lembar btn-sm">Masuk</a>
+          <a href="register.html" class="btn btn-lembar btn-sm">Daftar</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+<!-- ============ HERO ============ -->
+<header class="hero" id="beranda">
+  <div class="container text-center text-lg-start">
+    <div class="row align-items-center">
+      <div class="col-lg-6">
+        <span class="hero-badge"><i class="bi bi-sunset me-1"></i>Sebelum hari benar-benar usai</span>
+        <h1 class="mt-3 mb-3">Satu <span class="kata-sorot">lembar</span> lagi, sebelum matahari terbenam.</h1>
+        <p class="lead mb-4">
+          Lembar adalah tempat kecil yang hangat untuk mencatat bacaanmu,
+          menyimpan buku-buku favorit, dan menemukan cerita berikutnya.
+        </p>
+        <div class="d-flex flex-column flex-sm-row gap-3 justify-content-center justify-content-lg-start">
+          <a href="register.html" class="btn btn-lembar btn-lg">Mulai Membaca</a>
+          <a href="#rak-buku" class="btn btn-outline-lembar btn-lg">Lihat Rak Buku</a>
+        </div>
+      </div>
+
+      <div class="col-lg-6 d-none d-lg-block text-start">
+        <img src="assets/hero image.jpg" class="hero-ilustrasi" alt="Ilustrasi perempuan membaca buku ditemani kucing di dekat jendela">
+      </div>
+    </div>
+  </div>
+</header>
+
+  <!-- ============ RAK BUKU ============ -->
+  <section class="py-5" id="rak-buku">
+    <div class="container py-4">
+      <div class="text-center mb-5">
+        <h2 class="section-title">Rak Buku Saya</h2>
+        <p class="text-secondary mb-0">Bacaan yang menemani sore-soreku.</p>
+      </div>
+
+      <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 g-4">
+
+        <!-- Kartu 1 -->
+        <div class="col">
+          <div class="card book-card h-100">
+                 <img src="assets/Jakarta Sebelum Pagi.jpg" class="book-cover-img" alt="Cover Jakarta Sebelum Pagi">
+            <div class="card-body">
+              <span class="badge badge-lembar mb-2">Sedang dibaca</span>
+              <h5 class="card-title mb-1">Jakarta Sebelum Pagi</h5>
+              <p class="card-subtitle text-secondary small mb-3">Ziggy Z.</p>
+              <p class="card-text small">Cerita yang bergerak pelan di antara malam dan fajar kota.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Kartu 2 -->
+        <div class="col">
+          <div class="card book-card h-100">
+                <img src="assets/Di Tanah Lada.jpg" class="book-cover-img" alt="Di Tanah Lada">
+            <div class="card-body">
+              <span class="badge badge-lembar mb-2">Favorit</span>
+              <h5 class="card-title mb-1">Di Tanah Lada</h5>
+              <p class="card-subtitle text-secondary small mb-3">Ziggy Z.</p>
+              <p class="card-text small">Dunia dilihat dari mata anak kecil, lucu sekaligus menyesakkan.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Kartu 3 -->
+        <div class="col">
+          <div class="card book-card h-100">
+                <img src="assets/Second Sister.jpg" class="book-cover-img" alt="Second Sister">
+            <div class="card-body">
+              <span class="badge badge-soft mb-2">Daftar baca</span>
+              <h5 class="card-title mb-1">Second Sister</h5>
+              <p class="card-subtitle text-secondary small mb-3">Chan Ho-Kei</p>
+              <p class="card-text small">Tulis kesan atau alasanmu ingin membaca buku ini.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Kartu 4 -->
+        <div class="col">
+          <div class="card book-card h-100">
+                <img src="assets/Polaris Musim Dingin.jpg" class="book-cover-img" alt="Polaris Musim Dingin">
+            <div class="card-body">
+              <span class="badge badge-soft mb-2">Daftar baca</span>
+              <h5 class="card-title mb-1">Polaris Musim Dingin</h5>
+              <p class="card-subtitle text-secondary small mb-3">Alicia Lidwina</p>
+              <p class="card-text small">Tulis kesan atau alasanmu ingin membaca buku ini.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Kartu 5 -->
+        <div class="col">
+          <div class="card book-card h-100">
+                <img src="assets/Kastil Es dan Air Mancur yang Berdansa.jpg" class="book-cover-img" alt="Kastil Es dan Air Mancur yang Berdansa">
+            <div class="card-body">
+              <span class="badge badge-soft mb-2">Daftar baca</span>
+              <h5 class="card-title mb-1">Kastil Es dan Air Mancur yang Berdansa</h5>
+              <p class="card-subtitle text-secondary small mb-3">Prisca Primasari</p>
+              <p class="card-text small">Tulis kesan atau alasanmu ingin membaca buku ini.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Kartu 6 -->
+        <div class="col">
+          <div class="card book-card h-100">
+                <img src="assets/Heaven.jpg" class="book-cover-img" alt="Heaven">
+            <div class="card-body">
+              <span class="badge badge-soft mb-2">Daftar baca</span>
+              <h5 class="card-title mb-1">Heaven</h5>
+              <p class="card-subtitle text-secondary small mb-3">Mieko Kawakami</p>
+              <p class="card-text small">Tulis kesan atau alasanmu ingin membaca buku ini.</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FITUR ============ -->
+  <section class="py-5 section-alt" id="fitur">
+    <div class="container py-4">
+      <div class="text-center mb-5">
+        <h2 class="section-title">Kenapa Lembar?</h2>
+        <p class="text-secondary mb-0">Sederhana, hangat, dan khusus untuk pencinta buku.</p>
+      </div>
+      <div class="row g-4 text-center">
+        <div class="col-md-4">
+          <div class="feature-icon mb-3"><i class="bi bi-journal-bookmark"></i></div>
+          <h5>Catat Bacaan</h5>
+          <p class="text-secondary small">Simpan buku yang sedang, sudah, dan ingin kamu baca di satu tempat.</p>
+        </div>
+        <div class="col-md-4">
+          <div class="feature-icon mb-3"><i class="bi bi-chat-quote"></i></div>
+          <h5>Tulis Kesan</h5>
+          <p class="text-secondary small">Tuangkan perasaanmu setelah menutup halaman terakhir.</p>
+        </div>
+        <div class="col-md-4">
+          <div class="feature-icon mb-3"><i class="bi bi-bullseye"></i></div>
+          <h5>Target Baca</h5>
+          <p class="text-secondary small">Atur target bulanan dan lihat perkembanganmu pelan-pelan.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CTA ============ -->
+  <section class="py-5 text-center">
+    <div class="container py-3">
+      <h2 class="section-title mb-3">Siap membuka lembar pertama?</h2>
+      <a href="register.html" class="btn btn-lembar btn-lg">Buat Akun Gratis</a>
+    </div>
+  </section>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="footer-lembar py-4">
+    <div class="container d-flex flex-column flex-md-row justify-content-between align-items-center gap-2">
+      <span><i class="bi bi-book-half me-1"></i> Lembar &copy; 2026</span>
+      <div class="d-flex gap-3">
+        <a href="login.html">Masuk</a>
+        <a href="register.html">Daftar</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
