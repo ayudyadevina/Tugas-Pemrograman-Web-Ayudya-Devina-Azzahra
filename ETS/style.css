@@ -1,0 +1,790 @@
+/* ---------- Design tokens ---------- */
+:root {
+  --yale-blue: #0f4d92;
+  --parchment: #fef4d4;
+  --white: #ffffff;
+  --light-blue: #d9e9f2;
+  --haas-orange: #f48734;
+  --soft-yellow: #fce188;
+  --sage-green: #527d73;
+  --medium-blue: #708fb8;
+  --maroon: #61262a;
+  --black: #000000;
+  --ink: #1c2733; /* teks panjang: gelap tapi nyaman dibaca */
+
+  /* Oranye-merah pada ikon solid & tombol panah di desain.
+     Mau ikut Haas Orange? Ganti nilainya jadi var(--haas-orange). */
+  --icon-solid: #ee4b23;
+
+  --font-ui: "Plus Jakarta Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-editorial: "Lora", Georgia, "Times New Roman", serif;
+
+  --header-h: 96px;
+  --shadow-card: 0 4px 4px rgba(0, 0, 0, 0.25);
+
+  /* Timpa variabel Bootstrap */
+  --bs-body-font-family: var(--font-ui);
+  --bs-body-color: var(--ink);
+  --bs-body-bg: var(--white);
+  --bs-body-line-height: 1.5;
+  --bs-link-color: var(--yale-blue);
+  --bs-border-radius: 11px;
+}
+
+html {
+  scroll-padding-top: var(--header-h);
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, p, address {
+  margin: 0;
+}
+
+address {
+  font-style: normal;
+}
+
+a {
+  text-decoration: none;
+}
+
+svg {
+  display: block;
+}
+
+:focus-visible {
+  outline: 3px solid var(--haas-orange);
+  outline-offset: 3px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  * { transition: none !important; }
+}
+
+.section-title {
+  font-family: var(--font-editorial);
+  font-weight: 700;
+  font-size: clamp(30px, 4vw, 48px);
+  line-height: 1.2;
+  color: var(--yale-blue);
+  text-align: center;
+  text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+/* Ikon garis */
+.service-card__icon {
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.4;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+/* Ikon solid */
+.benefit__icon,
+.contact__icon,
+.hours__icon,
+.carousel-btn svg {
+  fill: currentColor;
+  stroke: none;
+}
+
+/* ---------- Tombol ---------- */
+.btn-brand,
+.btn-brand-outline {
+  --bs-btn-padding-x: 1.5rem;
+  --bs-btn-border-radius: 11px;
+  --bs-btn-font-weight: 600;
+  --bs-btn-font-size: 1.25rem;
+  min-width: 195px;
+  height: 66px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn-brand {
+  --bs-btn-color: var(--white);
+  --bs-btn-bg: var(--yale-blue);
+  --bs-btn-border-color: var(--yale-blue);
+  --bs-btn-hover-color: var(--white);
+  --bs-btn-hover-bg: #0b3d75;
+  --bs-btn-hover-border-color: #0b3d75;
+  --bs-btn-active-color: var(--white);
+  --bs-btn-active-bg: #0a3566;
+  --bs-btn-active-border-color: #0a3566;
+}
+
+.btn-brand-outline {
+  --bs-btn-color: var(--yale-blue);
+  --bs-btn-bg: var(--white);
+  --bs-btn-border-color: var(--yale-blue);
+  --bs-btn-hover-color: var(--yale-blue);
+  --bs-btn-hover-bg: var(--light-blue);
+  --bs-btn-hover-border-color: var(--yale-blue);
+  --bs-btn-active-color: var(--yale-blue);
+  --bs-btn-active-bg: var(--light-blue);
+  --bs-btn-active-border-color: var(--yale-blue);
+}
+
+/* =========================================================
+   NAVBAR
+   ========================================================= */
+.site-header {
+  --bs-navbar-color: var(--white);
+  --bs-navbar-hover-color: var(--white);
+  --bs-navbar-active-color: var(--white);
+  --bs-navbar-brand-color: var(--white);
+  --bs-navbar-brand-hover-color: var(--white);
+  background: var(--yale-blue);
+  padding: 0;
+}
+
+.site-header__inner {
+  min-height: var(--header-h);
+  max-width: 1440px;
+  padding: 8px clamp(16px, 4vw, 48px);
+}
+
+.brand {
+  display: inline-flex;
+  flex-shrink: 0;
+  align-items: center;
+  gap: 14px;
+  margin: 0;
+  padding: 0;
+  color: var(--white);
+}
+
+/* Beri jarak antara logo dan menu navigasi */
+.site-header .navbar-brand {
+  margin-right: clamp(32px, 4vw, 64px);
+}
+
+.brand:hover { color: var(--white); }
+
+.brand__logo {
+  flex: none;
+  width: 92px;
+  height: 58px;
+}
+
+.brand__text {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.1;
+}
+
+.brand__name {
+  font-weight: 700;
+  font-style: italic;
+  font-size: 40px;
+}
+
+.brand__tagline {
+  font-weight: 500;
+  font-size: 18px;
+}
+
+.site-header .nav-link {
+  font-weight: 500;
+  font-size: clamp(16px, 1.5vw, 22px);
+  line-height: 1.3;
+  padding: 4px 0;
+  white-space: nowrap; /* "Members List" tidak boleh turun baris */
+  text-underline-offset: 6px;
+}
+
+.site-header .nav-link:hover {
+  text-decoration: underline;
+}
+
+.site-header .nav-link.active {
+  font-weight: 600;
+  text-decoration: underline;
+}
+
+.btn-login {
+  --bs-btn-color: var(--yale-blue);
+  --bs-btn-bg: var(--white);
+  --bs-btn-border-color: var(--white);
+  --bs-btn-hover-color: var(--yale-blue);
+  --bs-btn-hover-bg: var(--parchment);
+  --bs-btn-hover-border-color: var(--parchment);
+  --bs-btn-active-color: var(--yale-blue);
+  --bs-btn-active-bg: var(--parchment);
+  --bs-btn-active-border-color: var(--parchment);
+  --bs-btn-border-radius: 6px;
+  --bs-btn-padding-x: 1.25rem;
+  min-width: 112px;
+  height: 44px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  font-size: clamp(16px, 1.5vw, 22px);
+}
+
+.site-header .navbar-toggler {
+  border-color: rgba(255, 255, 255, 0.6);
+}
+
+@media (min-width: 1200px) and (max-width: 1399.98px) {
+  .brand__logo { width: 80px; height: 50px; }
+  .brand__name { font-size: 34px; }
+  .brand__tagline { font-size: 16px; }
+}
+
+@media (max-width: 1199.98px) {
+  :root { --header-h: 72px; }
+
+  .brand__logo { width: 64px; height: 40px; }
+  .brand__name { font-size: 28px; }
+  .brand__tagline { font-size: 13px; }
+
+  .site-header .navbar-collapse {
+    padding: 8px 0 20px;
+  }
+
+  .site-header .nav-link {
+    padding: 14px 0;
+    font-size: 18px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+  }
+
+  .btn-login {
+    width: 100%;
+    margin-top: 16px;
+    height: 48px;
+    font-size: 18px;
+  }
+}
+
+/* =========================================================
+   HERO
+   ========================================================= */
+.hero {
+  display: flex;
+  align-items: center;
+  min-height: 636px;
+  padding-block: 72px;
+  color: var(--white);
+  background:
+    linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+    url("assets/hero.png") center / cover no-repeat,
+    #3a2a1c;
+}
+
+.hero__title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: var(--font-editorial);
+  font-weight: 700;
+  font-size: clamp(38px, 5vw, 54px);
+  line-height: 1.25;
+}
+
+.hero__title-line {
+  color: var(--white);
+  text-shadow: 0 4px 8px rgba(0, 0, 0, 0.45);
+}
+
+.hero__title-brand {
+  color: var(--yale-blue);
+  -webkit-text-stroke: 1px var(--white);
+  paint-order: stroke fill;
+  text-shadow: 0 4px 8px rgba(255, 255, 255, 0.9);
+}
+
+.hero__desc {
+  max-width: 1000px;
+  margin-top: 28px;
+  font-weight: 500;
+  font-size: clamp(16px, 1.6vw, 20px);
+  line-height: 1.6;
+  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.7);
+}
+
+@media (max-width: 575.98px) {
+  .hero { min-height: 520px; padding-block: 56px; }
+  .btn-brand,
+  .btn-brand-outline { min-width: 0; flex: 1 1 160px; height: 56px; font-size: 1.125rem; }
+}
+
+/* =========================================================
+   KEUNGGULAN
+   ========================================================= */
+.benefits {
+  padding-block: 24px 40px;
+  background: linear-gradient(180deg, var(--soft-yellow) 0%, var(--white) 95%);
+}
+
+.benefit {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  min-height: 258px;
+  padding: 32px 20px 28px;
+  border: 1px solid var(--yale-blue);
+  border-radius: 26px;
+  text-align: center;
+}
+
+.benefit__icon {
+  width: 88px;
+  height: 88px;
+  margin-bottom: 8px;
+  color: var(--icon-solid);
+}
+
+.benefit__title {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 1.25;
+  color: var(--yale-blue);
+}
+
+.benefit__desc {
+  font-size: 16px;
+}
+
+/* =========================================================
+   PENGGUNAAN PERPUSTAKAAN / LAYANAN DARING
+   ========================================================= */
+.services {
+  padding-block: 48px 72px;
+  background: linear-gradient(180deg, var(--white) 0%, var(--light-blue) 100%);
+}
+
+.service-tabs {
+  gap: 16px clamp(32px, 8vw, 121px);
+  margin-bottom: 56px;
+}
+
+.service-tabs .nav-link {
+  padding: 4px 0;
+  border: 0;
+  background: none;
+  font-family: var(--font-editorial);
+  font-weight: 600;
+  font-size: clamp(22px, 3vw, 40px);
+  line-height: 1.3;
+  color: rgba(0, 0, 0, 0.49);
+  transition: color 0.2s;
+}
+
+.service-tabs .nav-link:hover {
+  color: var(--yale-blue);
+}
+
+.service-tabs .nav-link.active {
+  font-weight: 700;
+  color: var(--yale-blue);
+  background: none;
+  text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.service-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  width: 100%;
+  max-width: 289px;
+  height: 162px;
+  margin-inline: auto;
+  padding: 20px 17px;
+  border: 1px solid var(--yale-blue);
+  border-radius: 21px;
+  background: rgba(255, 255, 255, 0.5);
+  color: var(--yale-blue);
+  text-align: center;
+  transition: background-color 0.2s, transform 0.2s, box-shadow 0.2s;
+}
+
+.service-card:hover {
+  color: var(--yale-blue);
+  background: var(--white);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 16px rgba(15, 77, 146, 0.18);
+}
+
+.service-card__icon {
+  width: 60px;
+  height: 60px;
+  color: var(--haas-orange);
+}
+
+.service-card__name {
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 1.25;
+}
+
+/* =========================================================
+   FASILITAS
+   ========================================================= */
+.facilities {
+  padding-block: 40px 80px;
+  background: linear-gradient(180deg, var(--light-blue) 0%, var(--white) 100%);
+}
+
+.carousel-wrap {
+  --gap: 40px;
+  --card-w: min(345px, calc(100vw - 124px));
+  --visible: 1;
+  position: relative;
+  margin-top: 56px;
+}
+
+@media (min-width: 920px)  { .carousel-wrap { --card-w: 345px; --visible: 2; } }
+@media (min-width: 1260px) { .carousel-wrap { --visible: 3; } }
+
+/* Jendela: hanya menampilkan --visible kartu, sisanya tersembunyi sampai digeser */
+.carousel-window {
+  width: calc(var(--visible) * var(--card-w) + (var(--visible) - 1) * var(--gap) + 12px);
+  margin-inline: auto;
+  padding: 8px 6px 16px;
+  overflow: hidden;
+  touch-action: pan-y;
+}
+
+.carousel-track {
+  display: flex;
+  gap: var(--gap);
+  width: max-content;
+}
+
+.facility {
+  position: relative;
+  flex: 0 0 var(--card-w);
+  width: var(--card-w);
+  height: 460px;
+  display: grid;
+  place-items: center;
+  padding: 24px;
+  border-radius: 15px;
+  overflow: hidden;
+  /* Foto sudah diedit dari sananya: tampilkan apa adanya, tanpa overlay */
+  background: var(--photo) center / cover no-repeat var(--medium-blue);
+  box-shadow: var(--shadow-card);
+  user-select: none;
+}
+
+.facility__name {
+  font-family: var(--font-editorial);
+  font-weight: 600;
+  font-size: 32px;
+  line-height: 1.25;
+  color: var(--white);
+  text-align: center;
+}
+
+/* Panah berada di margin luar kartu, seperti di desain */
+.carousel-btn {
+  position: absolute;
+  top: 50%;
+  z-index: 2;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  padding: 0;
+  border: 0;
+  border-radius: 50%;
+  background: var(--icon-solid);
+  color: var(--white);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+  transform: translateY(-50%);
+  transition: filter 0.2s, transform 0.2s;
+}
+
+.carousel-btn svg {
+  width: 28px;
+  height: 28px;
+}
+
+.carousel-btn:hover { filter: brightness(0.92); }
+.carousel-btn:active { transform: translateY(-50%) scale(0.95); }
+.carousel-btn--prev { left: 8px; }
+.carousel-btn--next { right: 8px; }
+
+@media (min-width: 920px) {
+  .carousel-btn--prev { left: 24px; }
+  .carousel-btn--next { right: 24px; }
+}
+
+@media (max-width: 575.98px) {
+  .carousel-btn { width: 40px; height: 40px; }
+  .carousel-btn svg { width: 24px; height: 24px; }
+}
+
+/* =========================================================
+   STATISTIK
+   ========================================================= */
+.stats {
+  padding-block: 64px 96px;
+  background: linear-gradient(180deg, var(--white) 20%, var(--yale-blue) 100%);
+}
+
+.stat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  max-width: 455px;
+  min-height: 170px;
+  margin-inline: auto;
+  padding: 24px;
+  border: 1px solid var(--yale-blue);
+  border-radius: 21px;
+  background: var(--parchment);
+  box-shadow: var(--shadow-card);
+  text-align: center;
+  font-weight: 600;
+  color: var(--haas-orange);
+}
+
+.stat__value {
+  font-size: clamp(36px, 4vw, 48px);
+  line-height: 1.2;
+}
+
+.stat__label {
+  font-size: clamp(20px, 2.2vw, 28px);
+  line-height: 1.25;
+}
+
+/* =========================================================
+   FOOTER
+   ========================================================= */
+.site-footer {
+  padding-block: 40px 56px;
+  background: var(--yale-blue);
+  color: var(--white);
+}
+
+.contact {
+  display: grid;
+  gap: 16px;
+  margin-top: 28px;
+}
+
+.contact__row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 16px;
+}
+
+.contact__icon {
+  flex: none;
+  width: 32px;
+  height: 32px;
+  color: var(--white);
+}
+
+.contact a {
+  color: var(--white);
+}
+
+.contact a:hover {
+  text-decoration: underline;
+}
+
+.hours__title {
+  margin-bottom: 24px;
+  font-family: var(--font-editorial);
+  font-weight: 600;
+  font-size: clamp(28px, 3vw, 36px);
+  text-align: center;
+}
+
+.hours__card {
+  display: grid;
+  grid-template-columns: 56px 1fr;
+  column-gap: 16px;
+  margin-top: 24px;
+  padding: 16px 25px 20px;
+  border: 1px solid var(--light-blue);
+  border-radius: 12px;
+}
+
+.hours__card:first-of-type {
+  margin-top: 0;
+}
+
+.hours__icon {
+  grid-row: 1 / span 4;
+  width: 44px;
+  height: 44px;
+  margin-top: 4px;
+  color: var(--white);
+}
+
+.hours__period {
+  font-weight: 600;
+  font-size: 22px;
+  line-height: 1.3;
+}
+
+.hours__label {
+  margin-top: 10px;
+  font-weight: 500;
+  font-size: 14px;
+}
+
+.hours__time {
+  font-weight: 600;
+  font-size: 20px;
+}
+
+.hours__closed {
+  margin-top: 8px;
+  font-weight: 500;
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+/* =========================================================
+   RESPONSIF TAMBAHAN
+   ========================================================= */
+@media (max-width: 575.98px) {
+  .benefit { min-height: 0; }
+  .service-card { height: auto; min-height: 140px; }
+  .facility { height: 400px; }
+  .stat { min-height: 140px; }
+}
+
+/* ===== Hover: foto fasilitas & kotak statistik ===== */
+.facility,
+.stat {
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+@media (hover: hover) {
+  .facility:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.35);
+  }
+
+  .stat:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.3);
+  }
+}
+
+/* =========================================================
+   HALAMAN DALAM: Registration, Member List, Login
+   ========================================================= */
+.page-hero {
+  padding-block: 56px 32px;
+  text-align: center;
+  background: linear-gradient(180deg, var(--light-blue) 0%, var(--white) 100%);
+}
+
+.page-hero p {
+  max-width: 640px;
+  margin: 12px auto 0;
+}
+
+.page-section {
+  min-height: 55vh;
+  padding-block: 24px 80px;
+}
+
+.panel {
+  padding: clamp(20px, 4vw, 40px);
+  background: var(--white);
+  border: 1px solid var(--yale-blue);
+  border-radius: 21px;
+  box-shadow: var(--shadow-card);
+}
+
+/* Form */
+.form-label {
+  font-weight: 600;
+  color: var(--yale-blue);
+}
+
+.form-control,
+.form-select {
+  padding: 0.65rem 0.9rem;
+  border-color: var(--medium-blue);
+  border-radius: 11px;
+}
+
+.form-control:focus,
+.form-select:focus {
+  border-color: var(--yale-blue);
+  box-shadow: 0 0 0 0.25rem rgba(15, 77, 146, 0.2);
+}
+
+/* Tombol ukuran kecil (tabel & modal) */
+.btn-brand.btn-compact,
+.btn-brand-outline.btn-compact,
+.btn-maroon.btn-compact {
+  min-width: 0;
+  height: auto;
+  padding: 0.4rem 0.9rem;
+  font-size: 0.95rem;
+  border-radius: 8px;
+}
+
+.btn-maroon {
+  --bs-btn-color: var(--white);
+  --bs-btn-bg: var(--maroon);
+  --bs-btn-border-color: var(--maroon);
+  --bs-btn-hover-color: var(--white);
+  --bs-btn-hover-bg: #4b1d20;
+  --bs-btn-hover-border-color: #4b1d20;
+  --bs-btn-active-color: var(--white);
+  --bs-btn-active-bg: #3d181a;
+  --bs-btn-active-border-color: #3d181a;
+  --bs-btn-font-weight: 600;
+}
+
+/* Tabel anggota */
+.members-table {
+  --bs-table-hover-bg: rgba(217, 233, 242, 0.55);
+}
+
+.members-table thead {
+  --bs-table-bg: var(--yale-blue);
+  --bs-table-color: var(--white);
+  --bs-table-border-color: rgba(255, 255, 255, 0.2);
+}
+
+.members-table th {
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.badge-jenis {
+  padding: 0.45em 0.85em;
+  border-radius: 999px;
+  font-weight: 600;
+}
+
+.badge-jenis--mahasiswa { background: var(--light-blue); color: var(--yale-blue); }
+.badge-jenis--dosen { background: var(--parchment); color: var(--yale-blue); border: 1px solid var(--soft-yellow); }
+.badge-jenis--tendik { background: var(--sage-green); color: var(--white); }
+
+/* Modal & notifikasi */
+.modal-title {
+  font-family: var(--font-editorial);
+  font-weight: 700;
+  color: var(--yale-blue);
+}
+
+.toast-success { background: var(--sage-green); color: var(--white); }
+.toast-error { background: var(--maroon); color: var(--white); }

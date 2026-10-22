@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="LibraryReg — Perpustakaan Universitas. Jelajahi koleksi, layanan, dan fasilitas perpustakaan, lalu daftar sebagai anggota.">
+  <title>LibraryReg | Perpustakaan Universitas</title>
+
+  <!-- Bootstrap 5 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Font: Plus Jakarta Sans (UI) + Lora (heading editorial) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lora:wght@600;700&family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;1,700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body id="top">
+
+  <!-- Sprite ikon (inline SVG; warna mengikuti currentColor) -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+    <defs>
+      <!-- Logo buku terbuka -->
+      <symbol id="i-logo" viewBox="0 0 64 40">
+        <path fill="#fff" d="M32 9C26 4.5 14 3 2 5.5v26c12-2.5 24-1 30 4z"/>
+        <path fill="#fff" d="M32 9c6-4.5 18-6 30-3.5v26c-12-2.5-24-1-30 4z"/>
+        <path fill="none" stroke="#0f4d92" stroke-width="1.6" stroke-linecap="round" d="M7 12c8-1.2 16 0 22 3M7 18c8-1.2 16 0 22 3M57 12c-8-1.2-16 0-22 3M57 18c-8-1.2-16 0-22 3"/>
+      </symbol>
+
+      <!-- Ikon solid (kartu keunggulan) -->
+      <symbol id="s-books" viewBox="0 0 24 24"><rect x="2.5" y="3" width="5" height="18" rx="1"/><rect x="9" y="3" width="5" height="18" rx="1"/><path d="m15.8 5.6 4.3-1.1 3.4 15.1-4.3 1.1z"/></symbol>
+      <symbol id="s-unlock" viewBox="0 0 24 24"><rect x="3.5" y="11" width="17" height="11" rx="2.5"/><path fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" d="M7.5 11V7a4.5 4.5 0 0 1 8.6-1.8"/><circle cx="12" cy="16" r="1.7" fill="#fff"/></symbol>
+      <symbol id="s-agent" viewBox="0 0 24 24"><circle cx="11" cy="8.5" r="4"/><path d="M3.5 22c0-4.6 3.4-7.4 7.5-7.4s7.5 2.8 7.5 7.4z"/><path fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" d="M5.5 8.5a5.5 5.5 0 0 1 11 0M17.8 8.5v3.2c0 1.2-1 2-2.2 2H14"/><rect x="3.8" y="8" width="2.4" height="4" rx="1.1"/><rect x="15.8" y="8" width="2.4" height="4" rx="1.1"/></symbol>
+      <symbol id="s-group" viewBox="0 0 24 24"><circle cx="12" cy="6" r="3"/><path d="M7 16c0-3.2 2.2-5.2 5-5.2s5 2 5 5.2z"/><circle cx="4.6" cy="9.4" r="2.2"/><path d="M1 16.6c0-2.3 1.5-3.9 3.6-3.9.8 0 1.5.2 2.1.6-.9.8-1.5 1.9-1.7 3.3z"/><circle cx="19.4" cy="9.4" r="2.2"/><path d="M23 16.6c0-2.3-1.5-3.9-3.6-3.9-.8 0-1.5.2-2.1.6.9.8 1.5 1.9 1.7 3.3z"/><rect x="1.5" y="18.8" width="21" height="2.6" rx="1.3"/></symbol>
+
+      <!-- Ikon garis (kartu layanan) -->
+      <symbol id="i-users" viewBox="0 0 24 24"><circle cx="12" cy="6" r="2.6"/><path d="M8 20v-4.5a4 4 0 0 1 8 0V20z"/><circle cx="4.5" cy="10.5" r="1.8"/><path d="M2.5 17.5c0-1.6.8-3 2-3.5"/><circle cx="19.5" cy="10.5" r="1.8"/><path d="M21.5 17.5c0-1.6-.8-3-2-3.5"/></symbol>
+      <symbol id="i-idcard" viewBox="0 0 24 24"><path d="M3 7h18v13H3zM3 7l3-3h12l3 3"/><circle cx="12" cy="11.5" r="2.2"/><path d="M8.2 18c.4-2 2-3 3.8-3s3.4 1 3.8 3"/></symbol>
+      <symbol id="i-file" viewBox="0 0 24 24"><path d="M6 3h12v18H6z"/><path d="m12 6-2.5 2v2h5V8z"/><path d="M9 14h6M9 17h6"/></symbol>
+      <symbol id="i-headset" viewBox="0 0 24 24"><path d="M4 14v-2a8 8 0 0 1 16 0v2"/><rect x="3" y="14" width="4" height="6" rx="1.8"/><rect x="17" y="14" width="4" height="6" rx="1.8"/><path d="M19 20c0 1.5-1.5 2-4 2h-2"/></symbol>
+      <symbol id="i-docs" viewBox="0 0 24 24"><path d="M8 3h9l3 3v13H8z"/><path d="M5 6v15h12"/><path d="M11 10h6M11 13h6M11 16h6"/></symbol>
+      <symbol id="i-list" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16" rx="1"/><path d="M7 9h1M11 9h6M7 12h1M11 12h6M7 15h1M11 15h6"/></symbol>
+
+      <!-- Ikon footer -->
+      <symbol id="f-pin" viewBox="0 0 24 24"><path d="M12 22s8-6.6 8-12.2A8 8 0 0 0 4 9.8C4 15.4 12 22 12 22zm0-9.5a3 3 0 1 1 0-6 3 3 0 0 1 0 6z"/></symbol>
+      <symbol id="f-mail" viewBox="0 0 24 24"><path d="M2.5 5h19A1.5 1.5 0 0 1 23 6.5v11a1.5 1.5 0 0 1-1.5 1.5h-19A1.5 1.5 0 0 1 1 17.5v-11A1.5 1.5 0 0 1 2.5 5zm.5 2.2v.3l9 5.8 9-5.8v-.3L12 12.7z"/></symbol>
+      <symbol id="f-phone" viewBox="0 0 24 24"><path d="M5.2 3h3.4l1.7 4.6-2.3 1.6a12 12 0 0 0 5.8 5.8l1.6-2.3 4.6 1.7v3.4a2 2 0 0 1-2.2 2A17 17 0 0 1 3.2 5.2 2 2 0 0 1 5.2 3z"/></symbol>
+      <symbol id="f-cap" viewBox="0 0 24 24"><path d="M12 3 1 8.5 12 14l9-4.5V16h2V8.5z"/><path d="M5 13.2V17c0 1.8 3.1 3.5 7 3.5s7-1.7 7-3.5v-3.8L12 16.8z"/></symbol>
+      <symbol id="f-calendar" viewBox="0 0 24 24"><path d="M7 2h2v2h6V2h2v2h2.5A1.5 1.5 0 0 1 21 5.5v14a1.5 1.5 0 0 1-1.5 1.5h-15A1.5 1.5 0 0 1 3 19.5v-14A1.5 1.5 0 0 1 4.5 4H7zM5 9v10h14V9zm2 2h2v2H7zm4 0h2v2h-2zm4 0h2v2h-2zM7 15h2v2H7zm4 0h2v2h-2z"/></symbol>
+
+      <!-- Panah carousel -->
+      <symbol id="c-prev" viewBox="0 0 24 24"><path d="M15.5 5.5v13L7 12z"/></symbol>
+      <symbol id="c-next" viewBox="0 0 24 24"><path d="M8.5 5.5v13L17 12z"/></symbol>
+    </defs>
+  </svg>
+
+ <!-- ================= NAVBAR ================= -->
+  <nav class="navbar navbar-expand-xl sticky-top site-header" data-bs-theme="dark" aria-label="Navigasi utama">
+    <div class="container-fluid site-header__inner">
+      <a class="navbar-brand brand" href="#top" aria-label="LibraryReg, kembali ke halaman utama">
+        <svg class="brand__logo" viewBox="0 0 64 40" aria-hidden="true"><use href="#i-logo"/></svg>
+        <span class="brand__text">
+          <span class="brand__name">LibraryReg</span>
+          <span class="brand__tagline">Perpustakaan Universitas</span>
+        </span>
+      </a>
+ 
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#primary-nav"
+              aria-controls="primary-nav" aria-expanded="false" aria-label="Buka menu navigasi">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+ 
+      <div class="collapse navbar-collapse justify-content-xl-end" id="primary-nav">
+        <ul class="navbar-nav align-items-xl-center gap-xl-4">
+          <li class="nav-item"><a class="nav-link active" href="#top" aria-current="page">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="#services">Service</a></li>
+          <li class="nav-item"><a class="nav-link" href="members.html">Members List</a></li>
+          <li class="nav-item"><a class="nav-link" href="registration.html">Registration</a></li>
+          <li class="nav-item"><a class="btn btn-login" href="login.html">Login</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+ 
+  <main>
+    
+    <!-- ================= HERO ================= -->
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="container text-center">
+        <h1 class="hero__title" id="hero-title">
+          <span class="hero__title-line">Selamat Datang di</span>
+          <span class="hero__title-brand">LibraryReg</span>
+        </h1>
+        <p class="hero__desc mx-auto">
+          Temukan dunia baru melalui setiap halaman buku. Jelajahi koleksi bacaan, perluas wawasan, dan temukan inspirasi tanpa batas.
+          <br class="d-none d-md-inline">
+          Mulai perjalanan literasimu bersama perpustakaan kami.
+        </p>
+        <div class="d-flex flex-wrap justify-content-center gap-3 mt-5">
+          <a class="btn btn-brand" href="registration.html">Daftar Anggota</a>
+          <a class="btn btn-brand-outline" href="#fasilitas">Lihat Koleksi</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= KEUNGGULAN ================= -->
+    <section class="benefits" id="about" aria-label="Keunggulan perpustakaan">
+      <div class="container">
+        <ul class="row g-3 g-lg-4 list-unstyled mb-0">
+          <li class="col-12 col-sm-6 col-lg-3">
+            <div class="benefit h-100">
+              <svg class="benefit__icon" aria-hidden="true"><use href="#s-books"/></svg>
+              <h2 class="benefit__title">Koleksi Lengkap</h2>
+              <p class="benefit__desc">Buku, jurnal, dan referensi untuk beragam bidang studi.</p>
+            </div>
+          </li>
+          <li class="col-12 col-sm-6 col-lg-3">
+            <div class="benefit h-100">
+              <svg class="benefit__icon" aria-hidden="true"><use href="#s-unlock"/></svg>
+              <h2 class="benefit__title">Akses untuk Semua</h2>
+              <p class="benefit__desc">Terbuka bagi seluruh sivitas akademika kampus.</p>
+            </div>
+          </li>
+          <li class="col-12 col-sm-6 col-lg-3">
+            <div class="benefit h-100">
+              <svg class="benefit__icon" aria-hidden="true"><use href="#s-agent"/></svg>
+              <h2 class="benefit__title">Layanan Digital</h2>
+              <p class="benefit__desc">Pendaftaran dan layanan anggota dapat diakses daring.</p>
+            </div>
+          </li>
+          <li class="col-12 col-sm-6 col-lg-3">
+            <div class="benefit h-100">
+              <svg class="benefit__icon" aria-hidden="true"><use href="#s-group"/></svg>
+              <h2 class="benefit__title">Ruang Nyaman</h2>
+              <p class="benefit__desc">Area baca dan belajar yang tenang untuk fokus.</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ================= PENGGUNAAN PERPUSTAKAAN / LAYANAN DARING ================= -->
+    <section class="services" id="services" aria-label="Layanan perpustakaan">
+      <div class="container">
+        <ul class="nav service-tabs justify-content-center" role="tablist">
+          <li class="nav-item" role="presentation">
+            <button class="nav-link active" id="tab-usage" type="button" role="tab"
+                    data-bs-toggle="tab" data-bs-target="#panel-usage"
+                    aria-controls="panel-usage" aria-selected="true">Penggunaan Perpustakaan</button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button class="nav-link" id="tab-online" type="button" role="tab"
+                    data-bs-toggle="tab" data-bs-target="#panel-online"
+                    aria-controls="panel-online" aria-selected="false" tabindex="-1">Layanan Daring</button>
+          </li>
+        </ul>
+
+        <div class="tab-content">
+          <div class="tab-pane fade show active" id="panel-usage" role="tabpanel" aria-labelledby="tab-usage" tabindex="0">
+            <ul class="row g-4 justify-content-center list-unstyled mb-0">
+              <li class="col-12 col-md-6 col-lg-4"><a class="service-card" href="#">
+                <svg class="service-card__icon" aria-hidden="true"><use href="#i-users"/></svg>
+                <span class="service-card__name">Reservasi Ruang Kolaboratif</span>
+              </a></li>
+              <li class="col-12 col-md-6 col-lg-4"><a class="service-card" href="#">
+                <svg class="service-card__icon" aria-hidden="true"><use href="#i-idcard"/></svg>
+                <span class="service-card__name">Keanggotaan</span>
+              </a></li>
+              <li class="col-12 col-md-6 col-lg-4"><a class="service-card" href="#">
+                <svg class="service-card__icon" aria-hidden="true"><use href="#i-file"/></svg>
+                <span class="service-card__name">Kebijakan</span>
+              </a></li>
+              <li class="col-12 col-md-6 col-lg-4"><a class="service-card" href="#">
+                <svg class="service-card__icon" aria-hidden="true"><use href="#i-headset"/></svg>
+                <span class="service-card__name">Layanan</span>
+              </a></li>
+              <li class="col-12 col-md-6 col-lg-4"><a class="service-card" href="#">
+                <svg class="service-card__icon" aria-hidden="true"><use href="#i-docs"/></svg>
+                <span class="service-card__name">Bookmarklet</span>
+              </a></li>
+              <li class="col-12 col-md-6 col-lg-4"><a class="service-card" href="#">
+                <svg class="service-card__icon" aria-hidden="true"><use href="#i-list"/></svg>
+                <span class="service-card__name">Panduan</span>
+              </a></li>
+            </ul>
+          </div>
+
+          <div class="tab-pane fade" id="panel-online" role="tabpanel" aria-labelledby="tab-online" tabindex="0">
+            <ul class="row g-4 justify-content-center list-unstyled mb-0">
+              <li class="col-12 col-md-6 col-lg-4"><a class="service-card" href="#">
+                <svg class="service-card__icon" aria-hidden="true"><use href="#i-users"/></svg>
+                <span class="service-card__name">Perpanjangan Daring</span>
+              </a></li>
+              <li class="col-12 col-md-6 col-lg-4"><a class="service-card" href="#">
+                <svg class="service-card__icon" aria-hidden="true"><use href="#i-idcard"/></svg>
+                <span class="service-card__name">E-Source Request</span>
+              </a></li>
+              <li class="col-12 col-md-6 col-lg-4"><a class="service-card" href="#">
+                <svg class="service-card__icon" aria-hidden="true"><use href="#i-file"/></svg>
+                <span class="service-card__name">Unggah Mandiri Skripsi</span>
+              </a></li>
+              <li class="col-12 col-md-6 col-lg-4"><a class="service-card" href="#">
+                <svg class="service-card__icon" aria-hidden="true"><use href="#i-headset"/></svg>
+                <span class="service-card__name">Similarity Check (Turnitin)</span>
+              </a></li>
+              <li class="col-12 col-md-6 col-lg-4"><a class="service-card" href="#">
+                <svg class="service-card__icon" aria-hidden="true"><use href="#i-docs"/></svg>
+                <span class="service-card__name">Rekomendasi Koleksi</span>
+              </a></li>
+              <li class="col-12 col-md-6 col-lg-4"><a class="service-card" href="#">
+                <svg class="service-card__icon" aria-hidden="true"><use href="#i-list"/></svg>
+                <span class="service-card__name">Cek Status Peminjaman</span>
+              </a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= FASILITAS ================= -->
+    <section class="facilities" id="fasilitas" aria-labelledby="facilities-title">
+      <div class="container">
+        <h2 class="section-title" id="facilities-title">Fasilitas Perpustakaan</h2>
+      </div>
+
+      <div class="carousel-wrap" role="region" aria-roledescription="carousel" aria-label="Fasilitas perpustakaan">
+        <button class="carousel-btn carousel-btn--prev" type="button" aria-label="Fasilitas sebelumnya">
+          <svg aria-hidden="true"><use href="#c-prev"/></svg>
+        </button>
+
+        <div class="carousel-window">
+          <ul class="carousel-track list-unstyled mb-0">
+            <li class="facility" style="--photo: url('assets/Study Room Facility.png')">
+            </li>
+            <li class="facility" style="--photo: url('assets/Reference Area Facility.png')">
+            </li>
+            <li class="facility" style="--photo: url('assets/Theater Facility.png')">
+            </li>
+            <li class="facility" style="--photo: url('assets/Kafetaria.png')">
+            </li>
+            <li class="facility" style="--photo: url('assets/Meja Informasi.png')">
+            </li>
+            <li class="facility" style="--photo: url('assets/Ruang Seminar.png')">
+            </li>
+            <li class="facility" style="--photo: url('assets/Mushola.png')">
+            </li>
+          </ul>
+        </div>
+
+        <button class="carousel-btn carousel-btn--next" type="button" aria-label="Fasilitas berikutnya">
+          <svg aria-hidden="true"><use href="#c-next"/></svg>
+        </button>
+      </div>
+    </section>
+
+    <!-- ================= STATISTIK ================= -->
+    <section class="stats" id="members" aria-labelledby="stats-title">
+      <div class="container">
+        <h2 class="section-title" id="stats-title">Perpustakaan dalam Angka</h2>
+        <ul class="row g-4 g-lg-5 justify-content-center list-unstyled mb-0 mt-4 mt-lg-5">
+          <li class="col-12 col-md-6 col-lg-5">
+            <div class="stat">
+              <strong class="stat__value">86.074+</strong>
+              <span class="stat__label">Total Koleksi Buku</span>
+            </div>
+          </li>
+          <li class="col-12 col-md-6 col-lg-5">
+            <div class="stat">
+              <strong class="stat__value">12.500+</strong>
+              <span class="stat__label">Total Anggota Terdaftar</span>
+            </div>
+          </li>
+          <li class="col-12 col-md-6 col-lg-5">
+            <div class="stat">
+              <strong class="stat__value">12.500+</strong>
+              <span class="stat__label">Total Kunjungan</span>
+            </div>
+          </li>
+          <li class="col-12 col-md-6 col-lg-5">
+            <div class="stat">
+              <strong class="stat__value">8.500+</strong>
+              <span class="stat__label">Total Buku Dipinjam</span>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="row g-5">
+        <div class="col-12 col-lg-6">
+          <a class="brand" href="#top" aria-label="LibraryReg, kembali ke atas">
+            <svg class="brand__logo" viewBox="0 0 64 40" aria-hidden="true"><use href="#i-logo"/></svg>
+            <span class="brand__text">
+              <span class="brand__name">LibraryReg</span>
+              <span class="brand__tagline">Perpustakaan Universitas</span>
+            </span>
+          </a>
+
+          <address class="contact">
+            <p class="contact__row">
+              <svg class="contact__icon" aria-hidden="true"><use href="#f-pin"/></svg>
+              <span>Gedung Perpustakaan, Area Kampus</span>
+            </p>
+            <p class="contact__row">
+              <svg class="contact__icon" aria-hidden="true"><use href="#f-mail"/></svg>
+              <a href="mailto:perpustakaan@kampus.ac.id">perpustakaan@kampus.ac.id</a>
+            </p>
+            <p class="contact__row">
+              <svg class="contact__icon" aria-hidden="true"><use href="#f-phone"/></svg>
+              <a href="tel:+623112345678">(031) 1234 5678</a>
+            </p>
+          </address>
+        </div>
+
+        <section class="col-12 col-lg-5 offset-lg-1" aria-labelledby="hours-title">
+          <h2 class="hours__title" id="hours-title">Jam Layanan</h2>
+
+          <article class="hours__card">
+            <svg class="hours__icon" aria-hidden="true"><use href="#f-cap"/></svg>
+            <h3 class="hours__period">Periode Perkuliahan</h3>
+            <p class="hours__label">Senin–Jumat:</p>
+            <p class="hours__time">07.00 – 23.00 WIB</p>
+            <p class="hours__closed">Sabtu–Minggu: Tutup</p>
+          </article>
+
+          <article class="hours__card">
+            <svg class="hours__icon" aria-hidden="true"><use href="#f-calendar"/></svg>
+            <h3 class="hours__period">Periode Libur Akademik</h3>
+            <p class="hours__label">Senin–Jumat:</p>
+            <p class="hours__time">08.00 – 15.00 WIB</p>
+            <p class="hours__closed">Sabtu–Minggu: Tutup</p>
+          </article>
+        </section>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
