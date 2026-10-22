@@ -57,13 +57,18 @@ Buku yang ditampilkan pada rak buku:
 
 **Tangkapan layar:**
 
-![Tampilan hero pada halaman beranda](screenshots/beranda-hero.png)
+<img width="940" height="440" alt="Screenshot 2026-10-20 200127" src="https://github.com/user-attachments/assets/2e9c1cad-bf4f-4bb9-9ba3-8ed62c6768f0" />
+
 *Gambar 1. Bagian hero dan navbar*
 
-![Tampilan rak buku](screenshots/beranda-rak-buku.png)
+<img width="936" height="427" alt="Screenshot 2026-10-20 202424" src="https://github.com/user-attachments/assets/6a05eb17-81d9-486e-949a-445e7e5846b2" />
+
 *Gambar 2. Bagian rak buku dalam bentuk card*
 
-![Tampilan bagian fitur dan footer](screenshots/beranda-fitur.png)
+<img width="945" height="329" alt="Screenshot 2026-10-20 202019" src="https://github.com/user-attachments/assets/e2ba53f1-0aaf-450e-bf8c-f24d78e9cee4" />
+
+<img width="944" height="231" alt="Screenshot 2026-10-20 202036" src="https://github.com/user-attachments/assets/3be9662f-8213-4b8e-aaf8-e8bd727a253c" />
+
 *Gambar 3. Bagian "Kenapa Lembar?", ajakan mendaftar, dan footer*
 
 ### B. Halaman Login
@@ -87,10 +92,12 @@ Pesan kesalahan berwarna merah ditampilkan langsung di bawah kolom yang bermasal
 
 **Tangkapan layar:**
 
-![Tampilan halaman login](screenshots/login.png)
+<img width="938" height="441" alt="Screenshot 2026-10-20 202125" src="https://github.com/user-attachments/assets/c9b59b01-a4d4-4f59-808e-3e044787eaf4" />
+
 *Gambar 4. Halaman login*
 
-![Tampilan validasi pada halaman login](screenshots/login-validasi.png)
+<img width="941" height="439" alt="Screenshot 2026-10-20 202550" src="https://github.com/user-attachments/assets/a419f98c-8ce3-4760-99e1-45e7dafba3a1" />
+
 *Gambar 5. Pesan validasi pada halaman login*
 
 ### C. Halaman Register
@@ -118,10 +125,12 @@ Aturan validasi pada halaman register:
 
 **Tangkapan layar:**
 
-![Tampilan halaman register](screenshots/register.png)
+<img width="937" height="437" alt="Screenshot 2026-10-20 202102" src="https://github.com/user-attachments/assets/066e56c5-d919-487c-988e-e5530b7865fa" />
+
 *Gambar 6. Halaman register*
 
-![Tampilan validasi pada halaman register](screenshots/register-validasi.png)
+<img width="935" height="433" alt="Screenshot 2026-10-20 202527" src="https://github.com/user-attachments/assets/cf04a5b7-81f8-4aa8-b3b9-ec02788d6c2b" />
+
 *Gambar 7. Pesan validasi pada halaman register*
 
 > Halaman login dan register pada proyek ini belum terhubung ke database. Setelah isian dinyatakan valid, website hanya menampilkan notifikasi dan berpindah halaman sebagai simulasi, sehingga cukup untuk keperluan latihan Bootstrap.
@@ -132,7 +141,18 @@ Seluruh halaman menyesuaikan ukuran layar menggunakan sistem grid Bootstrap. Pad
 
 **Tangkapan layar:**
 
-![Tampilan beranda pada layar HP](screenshots/responsif-mobile.png)
+<img width="300" height="590" alt="WhatsApp Image 2026-10-20 at 8 31 50 PM" src="https://github.com/user-attachments/assets/5ec9a939-187e-4f0f-a32c-62cd86130f37" />
+
+<img width="300" height="590" alt="WhatsApp Image 2026-10-20 at 8 31 51 PM" src="https://github.com/user-attachments/assets/ca07dcdd-bc95-4ca0-a39d-fddff9161bd7" />
+
+<img width="300" height="590" alt="WhatsApp Image 2026-10-20 at 8 31 53 PM" src="https://github.com/user-attachments/assets/71fe5d14-3956-48f3-b63b-c3b4f118cc7a" />
+
+<img width="300" height="590" alt="WhatsApp Image 2026-10-20 at 8 44 26 PM" src="https://github.com/user-attachments/assets/bc47276b-dac8-44d9-8eb9-ddb7a98e7cff" />
+
+<img width="300" height="590" alt="WhatsApp Image 2026-10-20 at 8 31 53 PM (1)" src="https://github.com/user-attachments/assets/8c7ca113-b6d8-4328-9180-c663d75cf0bc" />
+
+<img width="300" height="590" alt="WhatsApp Image 2026-10-20 at 8 31 54 PM" src="https://github.com/user-attachments/assets/8f65ae9d-da0d-485c-a599-520e7f956e8d" />
+
 *Gambar 8. Tampilan beranda pada layar kecil*
 
 ## 4. Alur Penggunaan
@@ -240,9 +260,9 @@ vercel --prod
 
 Website dapat diakses melalui:
 
-**[Lembar](GANTI-DENGAN-LINK-WEBSITE-KAMU)**
+**[Lembar](https://lembar-delta.vercel.app/)**
 
 ## 11. Kredit
 
-* Ilustrasi hero: *(isi nama seniman / sumber ilustrasi)*
+* Ilustrasi hero: *saya menemukan ilustrasi pada platform Pinterest dan tidak diketahui ilustartor dari karya tersebut*
 * Cover buku: milik masing-masing penerbit dan penulis, digunakan untuk keperluan pembelajaran.
