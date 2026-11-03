@@ -1,5 +1,5 @@
 # Warta: Website News Portal
----
+
 **Warta** adalah website portal berita online yang memungkinkan pengunjung membaca berita tanpa login, sedangkan admin dan editor mengelola berita, kategori, dan pengguna melalui dashboard. Website ini dibuat sebagai tugas proyek pembuatan aplikasi web dengan arsitektur tiga lapis (3 tier), yaitu HTML/CSS/JavaScript sebagai lapisan tampilan, PHP sebagai lapisan logika bisnis, dan MySQL sebagai lapisan data.
 
 Tampilan Warta mengusung suasana terang, modern, dan bersemangat untuk mendorong pembaca terus menelusuri informasi tentang dunia, dengan warna putih gading, hijau, dan aksen hijau limau yang segar.
