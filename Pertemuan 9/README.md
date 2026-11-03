@@ -170,7 +170,10 @@ Seluruh halaman menyesuaikan ukuran layar menggunakan CSS Grid dan Flexbox. Pada
 
 **Tangkapan layar:**
 
-![Gambar 15. Tampilan layar kecil](screenshots/localhost_newsportal_(iPhone%2016).png)
+![Gambar 15. Tampilan layar kecil]
+<p align="center">
+  <img src="screenshots/localhost_newsportal_(iPhone 16).png" alt="Tampilan layar kecil" width="300">
+</p>
 
 *Gambar 15. Tampilan beranda dan detail berita pada layar kecil*
 
