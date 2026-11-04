@@ -390,5 +390,5 @@ Website ini belum di-deploy ke hosting publik. Sebagai gantinya, seluruh halaman
 * Rancangan dan spesifikasi sistem News Portal: materi *Spesifikasi Aplikasi Web News Portal* oleh Fajar Baskoro (fajarbaskoro.blogspot.com).
 * Palet warna: referensi palet "MP076" oleh Alex Cristache.
 * Jenis huruf: Bricolage Grotesque dan Public Sans melalui Google Fonts.
-* Contoh isi berita: *saya menggunakan artikel dari BBC News Indonesia sebagai bahan uji coba tampilan, dan seluruh hak cipta tetap milik penulis dan penerbit aslinya*.
-* Gambar berita: *(isi sumber gambar yang kamu pakai, misalnya milik pribadi, Unsplash, atau Pexels)*.
+* Contoh isi berita: Menggunakan artikel dari BBC News Indonesia sebagai bahan uji coba tampilan, dan seluruh hak cipta tetap milik penulis dan penerbit aslinya.
+* Gambar berita: Segala foto dokumentasi yang digunakan pada website merupakan milik dari masing-masing fotografer yang saya temukan di internet.
