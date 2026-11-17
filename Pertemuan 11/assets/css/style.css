@@ -1,0 +1,58 @@
+:root{
+  --blue:#1A45A0; --blue-dark:#123578; --sky:#87CEEB; --soft:#F2F7FD; --line:#E3EAF5; --ink:#14224a;
+  --bs-primary:#1A45A0; --bs-primary-rgb:26,69,160; --bs-body-font-family:'Plus Jakarta Sans',system-ui,sans-serif;
+  --bs-body-color:#14224a; --bs-link-color:#1A45A0;
+}
+body{background:#fff;color:var(--ink)}
+.btn{border-radius:10px;font-weight:600}
+.btn-primary{--bs-btn-bg:#1A45A0;--bs-btn-border-color:#1A45A0;--bs-btn-hover-bg:#123578;--bs-btn-hover-border-color:#123578;--bs-btn-active-bg:#123578}
+.btn-outline-primary{--bs-btn-color:#1A45A0;--bs-btn-border-color:#1A45A0;--bs-btn-hover-bg:#1A45A0;--bs-btn-hover-border-color:#1A45A0}
+.form-control,.form-select{border-radius:10px;border-color:var(--line)}
+.form-control:focus,.form-select:focus{border-color:var(--blue);box-shadow:0 0 0 .2rem rgba(26,69,160,.15)}
+.navbar-brand{color:var(--blue)!important;display:flex;align-items:center;gap:10px}
+.logo-dot{width:26px;height:26px;border-radius:8px;background:linear-gradient(135deg,var(--blue),var(--sky))}
+.hero{background:linear-gradient(135deg,#1A45A0 0%,#2f6fc4 60%,#87CEEB 100%);color:#fff;padding:84px 0}
+.hero h1{font-weight:800;letter-spacing:-.02em;font-size:clamp(2rem,5vw,3.4rem)}
+.hero .btn-light{color:var(--blue)}
+.panel{background:#fff;border:1px solid var(--line);border-radius:16px;padding:22px}
+.tint{background:var(--soft)}
+.jur-card{border:1px solid var(--line);border-radius:16px;overflow:hidden;height:100%;background:#fff}
+.jur-card .bar{height:8px;background:linear-gradient(90deg,var(--blue),var(--sky))}
+.jur-card .bd{padding:18px}
+.app-shell{display:grid;grid-template-columns:240px 1fr;min-height:calc(100vh - 57px)}
+.sidebar{background:var(--soft);border-right:1px solid var(--line);padding:18px 12px;display:flex;flex-direction:column;gap:4px}
+.sidebar a{padding:10px 14px;border-radius:10px;text-decoration:none;color:var(--ink);font-weight:500}
+.sidebar a:hover{background:#e4eefb}
+.sidebar a.active{background:var(--blue);color:#fff}
+.content{padding:28px;min-width:0}
+.stat{border-radius:16px;padding:18px;background:#fff;border:1px solid var(--line);border-left:5px solid var(--blue)}
+.stat b{font-size:2rem;display:block;line-height:1.1;color:var(--blue)}
+.stat.sky{border-left-color:var(--sky)}
+.progress{height:10px;border-radius:10px;background:var(--line)}
+.progress-bar{background:var(--blue)}
+.table>:not(caption)>*>*{padding:.7rem .8rem;border-color:var(--line)}
+.table thead th{font-size:.82rem;color:#5b6785;background:var(--soft);white-space:nowrap}
+.timeline-item{border-left:3px solid var(--sky);padding-left:14px;margin:8px 0}
+@media(max-width:768px){.app-shell{grid-template-columns:1fr}.sidebar{flex-direction:row;overflow-x:auto;border-right:0;border-bottom:1px solid var(--line)}.sidebar a{white-space:nowrap}.content{padding:18px}}
+@media print{.navbar,.sidebar,.no-print{display:none!important}.app-shell{display:block}}
+/* --- logo, hero foto, footer --- */
+.brand-logo{height:34px;width:auto;max-width:44px;object-fit:contain}
+.hero-tag{display:inline-block;background:rgba(255,255,255,.18);border:1px solid rgba(255,255,255,.4);padding:4px 14px;border-radius:99px;font-size:.85rem;font-weight:600}
+.sched{margin-top:-60px;position:relative;z-index:3}
+.site-footer{background:#123578;color:#fff;padding:48px 0 0;margin-top:0}
+.site-footer a{color:#cfe6f7;text-decoration:none;display:inline-block;padding:2px 0}
+.site-footer a:hover{color:#fff;text-decoration:underline}
+.footer-logo{width:42px;height:42px;background:#fff;border-radius:12px;display:flex;align-items:center;justify-content:center;padding:5px}
+.footer-logo img{max-width:100%;max-height:100%}
+.footer-bottom{border-top:1px solid rgba(255,255,255,.2);margin-top:32px;padding:16px 0;text-align:center;font-size:.9rem;opacity:.8}
+/* --- hero: foto menyatu dengan latar biru --- */
+.hero{position:relative;overflow:hidden;padding:84px 0 110px}
+.hero-inner{position:relative;z-index:2}
+.hero-photo{position:absolute;top:0;right:0;bottom:0;width:58%;z-index:1;
+  -webkit-mask-image:linear-gradient(to right,transparent 0%,rgba(0,0,0,.55) 28%,#000 60%);
+          mask-image:linear-gradient(to right,transparent 0%,rgba(0,0,0,.55) 28%,#000 60%)}
+.hero-photo img{width:100%;height:100%;object-fit:cover;object-position:center;display:block}
+.hero-photo::after{content:"";position:absolute;inset:0;background:linear-gradient(135deg,rgba(26,69,160,.35),rgba(26,69,160,0) 70%)}
+@media(max-width:991px){
+  .hero-photo{width:100%;opacity:.25;-webkit-mask-image:none;mask-image:none}
+}

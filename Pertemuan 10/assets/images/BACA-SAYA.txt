@@ -1,0 +1,4 @@
+Taruh gambar kamu di folder ini dengan nama persis:
+  logo.png  -> logo SMK Nusantara (disarankan PNG transparan, persegi, min. 200x200 px)
+  hero.jpg  -> foto hero beranda (disarankan landscape/persegi, min. 1000x800 px, maks. 500 KB)
+Sebelum file ada, tampil kotak placeholder biru otomatis.
