@@ -1,5 +1,5 @@
 # Warta: Website News Portal
----
+
 **Warta** adalah website portal berita online yang memungkinkan pengunjung membaca berita tanpa login, sedangkan admin dan editor mengelola berita, kategori, dan pengguna melalui dashboard. Website ini dibuat sebagai tugas proyek pembuatan aplikasi web dengan arsitektur tiga lapis (3 tier), yaitu HTML/CSS/JavaScript sebagai lapisan tampilan, PHP sebagai lapisan logika bisnis, dan MySQL sebagai lapisan data.
 
 Tampilan Warta mengusung suasana terang, modern, dan bersemangat untuk mendorong pembaca terus menelusuri informasi tentang dunia, dengan warna putih gading, hijau, dan aksen hijau limau yang segar.
@@ -390,5 +390,5 @@ Website ini belum di-deploy ke hosting publik. Sebagai gantinya, seluruh halaman
 * Rancangan dan spesifikasi sistem News Portal: materi *Spesifikasi Aplikasi Web News Portal* oleh Fajar Baskoro (fajarbaskoro.blogspot.com).
 * Palet warna: referensi palet "MP076" oleh Alex Cristache.
 * Jenis huruf: Bricolage Grotesque dan Public Sans melalui Google Fonts.
-* Contoh isi berita: *saya menggunakan artikel dari BBC News Indonesia sebagai bahan uji coba tampilan, dan seluruh hak cipta tetap milik penulis dan penerbit aslinya*.
-* Gambar berita: *(isi sumber gambar yang kamu pakai, misalnya milik pribadi, Unsplash, atau Pexels)*.
+* Contoh isi berita: Menggunakan artikel dari BBC News Indonesia sebagai bahan uji coba tampilan, dan seluruh hak cipta tetap milik penulis dan penerbit aslinya.
+* Gambar berita: Segala foto dokumentasi yang digunakan pada website merupakan milik dari masing-masing fotografer yang saya temukan di internet.
