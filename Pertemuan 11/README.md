@@ -507,7 +507,7 @@ Hal yang belum termasuk dalam ruang lingkup MVP: pembayaran online, integrasi Da
 
 * Rancangan dan spesifikasi sistem: dokumen *Product Requirements Document PPDB Online SMK Nusantara* pada mata kuliah Web Back End.
 * Palet warna: referensi gambar *Education & Learning Gradient Palette*.
-* Foto hero: *(isi sumber foto)*.
-* Logo: *(isi sumber logo)*.
+* Foto hero: Didapatkan dari Internet.
+* Logo: Didapatkan dari Internet.
 * Jenis huruf: Plus Jakarta Sans melalui Google Fonts.
 * Framework: Bootstrap 5.3.3.
