@@ -474,9 +474,9 @@ Akun untuk uji coba:
 | Email                 | Password   | Role         |
 | --------------------- | ---------- | ------------ |
 | `admin@smk.id`        | `admin123` | Admin        |
-| *(isi email siswa 1)* | *(isi)*    | Calon siswa  |
-| *(isi email siswa 2)* | *(isi)*    | Calon siswa  |
-| *(isi email siswa 3)* | *(isi)*    | Calon siswa  |
+| `nawangramadhan@gmai.com` | `nawang123`    | Calon siswa  |
+| `eminaminah@gmail.com` | `emina123`    | Calon siswa  |
+| `abelfergani@gmail.com` | `abel123`   | Calon siswa  |
 
 Password akun admin bawaan sebaiknya segera diganti setelah aplikasi dipakai.
 
